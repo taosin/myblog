@@ -77,4 +77,8 @@ theme: maupassant
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repository: https://git.coding.net/imocco/imocco.coding.me.git
+  branch: master
+
+avatar: http://7xs43y.com1.z0.glb.clouddn.com/u=1421062774,389829371&fm=21&gp=0.jpg
