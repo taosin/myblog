@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h3>每天阅读的，值得分享的，便保留下来。</h3>
+	<div id="readlines_">
+	</div>
+</body>
+<script type="text/javascript" src="http://blog.xinsay.cn/jquery-2.2.1.js"></script>
+<script type="text/javascript" src="http://blog.xinsay.cn/av.min.js"></script>
+<script>AV.initialize("", "");</script>
+<script type="text/javascript">
+	document.title ='阅读轨迹-值得分享的';
+	var result = [];
+	var query = new AV.Query('ReadInfo');
+	// query.descending('createdAt');
+	query.find().then(function(results) {
+		var keys = {};
+		var dates = [];
+		var values = {};
+		for (var i = results.length-1; i >= 0; i--) {
+			var result = results[i]._serverData;
+			var key = result.createTime;
+			var value = keys[key];
+			if (!value) {
+				keys[key]=key;
+				dates.push(key);
+				values[key] = [];
+				values[key].push(result);
+			} else {
+				values[key].push(result);
+			}
+		}
+		const keyAttr = Object.keys(keys).sort(function(a, b) {
+			return new Date(b) - new Date(a);
+		});
+		var readInfos= values;
+		for (var i = 0; i < keyAttr.length; i++) {
+			var item = '<div id="'+keyAttr[i]+'" class="read_item"><h4><i class="menu-item-icon fa fa-circle"></i><span style="padding-left: 10px;">'+keyAttr[i]+'</span></h4></div>'
+			$('#readlines_').append(item)
+			for (var j = 0; j < readInfos[keyAttr[i]].length; j++) {
+				var per = '<div id="readlines_div"><h5><a target="_blank" href="'+readInfos[keyAttr[i]][j].url+'">'+readInfos[keyAttr[i]][j].title+'</a></h5></div>'
+				$('#'+keyAttr[i]).append(per)
+			}
+		}
+	}, function(error) {});
+</script>
+</html>
+<style type="text/css" scoped>
+	h3{
+		text-align: center;
+	}
+	.read_item{
+		margin: 20px;
+	}
+	h5{
+		/*padding-left: 10px;*/
+	}
+	.span{
+		margin-left: -6px;
+		width: 20px;
+		height: 20px;
+		background: red;
+		border: 1px solid #fff;
+		border-radius: 50%;
+	}
+</style>
