@@ -1,11 +1,9 @@
 ---
-title: CentOS 安装Node.js、npm、htop、pm2
+title: CentOS 安装 Node.js、npm、htop、pm2
 date: 2017-05-21 22:23:16
 tags: bash
 categories: 关于技术
 ---
-
-# CentOS 安装Node.js、npm、htop、pm2
 
 **1. 下载node.js**
 

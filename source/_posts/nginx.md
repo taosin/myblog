@@ -19,7 +19,7 @@ nginx
 ```
 
 此时，访问 http://<您的域名> 可以看到 Nginx 的测试页面 
-> 如果无法访问，请重试用 `nginx -s reload` 命令重启 Nginx  
+*<p style="color:red">如果无法访问，请重试用 `nginx -s reload` 命令重启 Nginx</p>*
 
 ## 配置静态服务器访问路径
 外网用户访问服务器的 Web 服务由 Nginx 提供，Nginx 需要配置静态资源的路径信息才能通过 url 正确访问到服务器上的静态资源。
@@ -91,6 +91,7 @@ mkdir -p /data/www
 ```
 
 ## 创建第一个静态文件
+
 在 **/data/www** 目录下创建我们的第一个静态文件`index.html`
 
 示例代码：`/data/www/index.html`
@@ -109,4 +110,5 @@ Hello world！
 现在访问 http://<您的域名>/index.html 应该可以看到页面输出 [Hello world!]
 
 到此，一个基于 Nginx 的静态服务器就搭建完成了，现在所有放在 /data/www 目录下的的静态资源都可以直接通过域名访问。
+
 > 如果无显示，请刷新浏览器页面  
