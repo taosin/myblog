@@ -1,14 +1,13 @@
 ---
-title: vue页面使用阿里oss上传图片功能(一)
+title: vue使用阿里oss上传图片功能1
 date: 2017-05-24 09:11:56
 tags: vue.js
 categories: 关于技术
 ---
 
-[源码](https://github.com/taosin/alioss-js-upload)
+<img src="http://blog.xinsay.cn/0e11af972a262b19c8f38df754c88348.png" alt="">
 
-
-直奔主题：
+[demo源码](https://github.com/taosin/alioss-js-upload)
 
 >## 前端部分
 

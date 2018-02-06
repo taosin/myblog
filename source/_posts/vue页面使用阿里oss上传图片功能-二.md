@@ -1,16 +1,16 @@
 ---
-title: vue页面使用阿里oss上传图片功能(二)
+title: vue使用阿里oss上传图片功能2
 date: 2017-05-24 14:35:08
 tags: vue.js
 categories: 关于技术
 ---
+<img src="http://blog.xinsay.cn/0e11af972a262b19c8f38df754c88348.png" alt="">
 
-[源码](https://github.com/taosin/alioss-js-upload)
+### 主要介绍OSS管理控制台设置访问权限、角色等。
 
+[demo源码](https://github.com/taosin/alioss-js-upload)
 
->主要介绍OSS管理控制台设置访问权限、角色等。
-
- 进入控制台，鼠标移到右上角用户名处，点击“访问控制”,如下图：
+进入控制台，鼠标移到右上角用户名处，点击“访问控制”,如下图：
 ![enter image description here](http://blog.xinsay.cn/oss_11.jpg)
 如果没有此功能，则将鼠标移至 **产品**  -> **管理与控制**，点击 **访问控制**进入访问控制产品页
 ![enter image description here](http://blog.xinsay.cn/oss_123.png)
@@ -28,17 +28,17 @@ categories: 关于技术
 * 在弹出对话框中：选择授权策略模板（使用空模板）
 * 编辑授权策略并提交：修改 授权策略名称（自定义名称），备注，策略内容，并提交。
 **示例**：一个MNS授权策略内容模版:
-```
+```js
 {
-						"Statement": [
-					　　		{
-								"Action": "mns:*",
-								"Effect": "Allow",
-								"Resource": "acs:mns:*:*:*" 
-							}
-						],
-						"Version": "1"
-				　 　}
+	"Statement": [
+	　　	{
+			"Action": "mns:*",
+			"Effect": "Allow",
+			"Resource": "acs:mns:*:*:*" 
+		}
+	],
+	"Version": "1"
+　 　}
 ```
 **授权策略**是json格式的字符串，其中，
 **Action** ： 表示要授权的操作，MNS 操作都以"mns:"开头，
@@ -76,35 +76,35 @@ categories: 关于技术
 var sts = new STS({
 	accessKeyId: '子账号 accessKeyId',
 	accessKeySecret: '子账号 accessKeySecret',
-});
-```
+	});
+	```
 
-accessKeyId 和 accessKeySecret 为第一步创建的子用户的 key
+	accessKeyId 和 accessKeySecret 为第一步创建的子用户的 key
 
-2. rolearn
-```javascript
-var rolearn = '对应角色的Arn值';
-```
-3.policy
-```javascript
-var policy = {
-	"Version": "1",
-	"Statement": [
-	{
-		"Effect": "Allow",
-		"Action": [
-		"oss:GetObject",
-		"oss:PutObject"
-		],
-		"Resource": [
-		"acs:oss:*:*:BucketName",
-		"acs:oss:*:*:BucketName/*"
+	2. rolearn
+	```javascript
+	var rolearn = '对应角色的Arn值';
+	```
+	3.policy
+	```javascript
+	var policy = {
+		"Version": "1",
+		"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+			"oss:GetObject",
+			"oss:PutObject"
+			],
+			"Resource": [
+			"acs:oss:*:*:BucketName",
+			"acs:oss:*:*:BucketName/*"
+			]
+		}
 		]
-	}
-	]
-};
-```
+	};
+	```
 
-这里的policy 必须和之前创建的策略一致。
+	这里的policy 必须和之前创建的策略一致。
 
 

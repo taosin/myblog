@@ -7,8 +7,9 @@ categories: 关于技术
 
 搭建静态网站，首先需要部署环境。下面的步骤，将告诉大家如何在服务器上通过 Nginx 部署 HTTP 静态服务
 
-## 安装Nginx
-在 CentOS 上，可直接使用 `yum` 来安装 Nginx
+* 安装Nginx
+
+在 `CentOS` 上，可直接使用 `yum` 来安装 `Nginx`
 ```bash
 yum install nginx -y
 ```
@@ -21,18 +22,20 @@ nginx
 此时，访问 http://<您的域名> 可以看到 Nginx 的测试页面 
 *<p style="color:red">如果无法访问，请重试用 `nginx -s reload` 命令重启 Nginx</p>*
 
-## 配置静态服务器访问路径
+* 配置静态服务器访问路径
+
 外网用户访问服务器的 Web 服务由 Nginx 提供，Nginx 需要配置静态资源的路径信息才能通过 url 正确访问到服务器上的静态资源。
 
-打开 Nginx 的默认配置文件 */etc/nginx/nginx.conf* ，修改 Nginx 配置，将默认的` root /usr/share/nginx/html;` 修改为: `root /data/www;`，如下：
-示例代码：/etc/nginx/nginx.conf
+打开 `Nginx` 的默认配置文件 */etc/nginx/nginx.conf* ，修改 Nginx 配置，将默认的` root /usr/share/nginx/html;` 修改为: `root /data/www;`，如下：
+示例代码：`/etc/nginx/nginx.conf`
+
 ```javascript
 user nginx;
 worker_processes auto;
 error_log /var/log/nginx/error.log;
 pid /run/nginx.pid;
 
-include /usr/share/nginx/modules/*.conf;
+include /usr/share/nginx/modules/ *.conf;
 
 events {
     worker_connections 1024;
@@ -54,7 +57,7 @@ http {
     include             /etc/nginx/mime.types;
     default_type        application/octet-stream;
 
-    include /etc/nginx/conf.d/*.conf;
+    include /etc/nginx/conf.d/ *.conf;
 
     server {
         listen       80 default_server;
@@ -62,7 +65,7 @@ http {
         server_name  _;
         root         /data/www;
 
-        include /etc/nginx/default.d/*.conf;
+        include /etc/nginx/default.d/ *.conf;
 
         location / {
         }
@@ -90,7 +93,7 @@ nginx -s reload
 mkdir -p /data/www
 ```
 
-## 创建第一个静态文件
+* 创建第一个静态文件
 
 在 **/data/www** 目录下创建我们的第一个静态文件`index.html`
 
@@ -107,8 +110,8 @@ Hello world！
 </body>
 </html>
 ```
-现在访问 http://<您的域名>/index.html 应该可以看到页面输出 [Hello world!]
+现在访问 `http://<您的域名>/index.html` 应该可以看到页面输出 [Hello world!]
 
-到此，一个基于 Nginx 的静态服务器就搭建完成了，现在所有放在 /data/www 目录下的的静态资源都可以直接通过域名访问。
+到此，一个基于 `Nginx` 的静态服务器就搭建完成了，现在所有放在 /data/www 目录下的的静态资源都可以直接通过域名访问。
 
-> 如果无显示，请刷新浏览器页面  
+<span>注：如果无显示，请刷新浏览器页面。</span>

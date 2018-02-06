@@ -5,7 +5,7 @@ tags: vue.js
 categories: 关于技术
 ---
 
-> 基于Vue.js的纯前端博客  
+基于Vue.js的纯前端博客  
 
 
 * 通过Vue构建博客前端框架
