@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Nix_____
-subtitle: Nix的小黑屋
-description: Nixx
-author: Nix
+title: Nix_____的小黑屋
+subtitle: Nix_____的小黑屋
+description: Nix的小黑屋
+author: Nix_____
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://iamtaoxin.com
+url: https://iamtaoxin.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -39,7 +39,7 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace:
   
@@ -72,13 +72,22 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: maupassant
+theme: aath
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repository: https://git.coding.net/imocco/imocco.coding.me.git
-  branch: master
+  - type: git
+    repository: https://git.coding.net/imocco/imocco.coding.me.git
+    branch: master
+
+  - type: git
+    repository: https://github.com/taosin/taosin.github.io.git
+    branch: master
 
 avatar: http://7xs43y.com1.z0.glb.clouddn.com/u=1421062774,389829371&fm=21&gp=0.jpg
+
+links:
+  # 百度: https://www.baidu.com/
+  # 谷歌: https://www.google.com/
+  # 知乎: https://www.zhihu.com/

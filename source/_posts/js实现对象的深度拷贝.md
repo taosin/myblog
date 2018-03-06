@@ -5,9 +5,9 @@ tags: javascript
 categories: 关于技术
 ---
 
-js实现对象的深度拷贝
-------
 在前端页面中，有些时候数据的变化并没有驱动页面视图的变化，这个时候就需要深度拷贝，所以封装了一个使用原生JS深度的拷贝，代码如下：
+
+
 ``` Javascript
 function deepCopy(oldObj) {
         // 定义一个新的空对象
