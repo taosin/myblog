@@ -4,26 +4,26 @@ date: 2017-05-24 14:35:08
 tags: vue.js
 categories: 关于技术
 ---
-<img src="http://blog.xinsay.cn/0e11af972a262b19c8f38df754c88348.png" alt="">
+<img src="http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png" alt="">
 
 ### 主要介绍OSS管理控制台设置访问权限、角色等。
 
 [demo源码](https://github.com/taosin/alioss-js-upload)
 
 进入控制台，鼠标移到右上角用户名处，点击“访问控制”,如下图：
-![enter image description here](http://blog.xinsay.cn/oss_11.jpg)
+![enter image description here](http://images.iamtaoxin.com/oss_11.jpg)
 如果没有此功能，则将鼠标移至 **产品**  -> **管理与控制**，点击 **访问控制**进入访问控制产品页
-![enter image description here](http://blog.xinsay.cn/oss_123.png)
+![enter image description here](http://images.iamtaoxin.com/oss_123.png)
 
 #### 1.创建子账号
 
 * 点击左侧的 **用户管理** -> **自定义授权策略** ->**新建授权策略** ， 如下图：
-![enter image description here](http://blog.xinsay.cn/oss_14.jpg)
+![enter image description here](http://images.iamtaoxin.com/oss_14.jpg)
 
 #### 2.新建授权策略
 * 点击左侧的 **策略管理** -> **新建用户** ， 如下图：
 
-![enter image description here](http://blog.xinsay.cn/oss_15.jpg)
+![enter image description here](http://images.iamtaoxin.com/oss_15.jpg)
 
 * 在弹出对话框中：选择授权策略模板（使用空模板）
 * 编辑授权策略并提交：修改 授权策略名称（自定义名称），备注，策略内容，并提交。
@@ -54,20 +54,20 @@ categories: 关于技术
 * 返回 **用户管理** ,找到第一步创建的子账号，点击右侧 **授权**
 * 在弹出的对话框中，选择**授权策略名称**，并添加到右侧已选**授权策略**列表，点击 **确定** 提交，如下图：
 * 
-![enter image description here](http://blog.xinsay.cn/add_policy_to_user.jpg)
+![enter image description here](http://images.iamtaoxin.com/add_policy_to_user.jpg)
 
 #### 4.创建角色
 
 * 点击左侧的 **角色管理** -> **新建角色**如下图：
 
-![enter image description here](http://blog.xinsay.cn/oss_13.jpg)
-![enter image description here](http://blog.xinsay.cn/oss_16.jpg)
+![enter image description here](http://images.iamtaoxin.com/oss_13.jpg)
+![enter image description here](http://images.iamtaoxin.com/oss_16.jpg)
 
 
 #### 4.授权策略访问角色
 * 点击左侧的 **角色管理** ,在右侧的角色列表中选择需要授权的角色，点击**授权**，如下图：
 
-![enter image description here](http://blog.xinsay.cn/oss_17.jpg)
+![enter image description here](http://images.iamtaoxin.com/oss_17.jpg)
 
 #### 5.注意事项
 

@@ -5,7 +5,7 @@ tags: vue.js
 categories: 关于技术
 ---
 
-<img src="http://blog.xinsay.cn/0e11af972a262b19c8f38df754c88348.png" alt="">
+<img src="http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png" alt="">
 
 [demo源码](https://github.com/taosin/alioss-js-upload)
 

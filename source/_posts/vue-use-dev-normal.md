@@ -5,7 +5,7 @@ tags: vue
 categories: 关于技术
 ---
 
-<img src="http://blog.xinsay.cn/219dda941a28c43341fb6063efcd06d0.png" alt="">
+<img src="http://images.iamtaoxin.com/219dda941a28c43341fb6063efcd06d0.png" alt="">
 
 参考：[Vue.js风格指南](https://cn.vuejs.org/v2/style-guide/)
 
