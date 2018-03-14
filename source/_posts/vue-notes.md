@@ -24,13 +24,14 @@ description: 不知不觉，使用 Vue 开发已经两年多了，从 1.0 到 2.
 
 # 3.Vue的优点是什么？
  
-* 1. 低耦合。视图层(View) 可以独立于 `Model` 变化和修改，一个 `ViewModel` 可以绑定到不同改的 `View` 上，当 `View` 发生变化 `Model` 可以不变，当 `Model` 变化的时候 `View` 也可以不变。
+* 1.低耦合。视图层(View) 可以独立于 `Model` 变化和修改，一个 `ViewModel` 可以绑定到不同改的 `View` 上，当 `View` 发生变化 `Model` 可以不变，当 `Model` 变化的时候 `View` 也可以不变。
 
-* 2. 可重用性。你可以把一些视图层逻辑放在一个 `ViewModel` 中，让很多 `View` 重用这段视图逻辑。
+* 2.可重用性。你可以把一些视图层逻辑放在一个 `ViewModel` 中，让很多 `View` 重用这段视图逻辑。
 
-* 3. 独立开发。开发人员可以专注于业务逻辑和数据的开发(`ViewModel`)，设计人员可以专注于页面设计，使用 `Expression Blend` 可以很容易设计界面并生成 **xml** 代码。
+* 3.独立开发。开发人员可以专注于业务逻辑和数据的开发(`ViewModel`)，设计人员可以专注于页面设计，使用 `Expression Blend` 可以很容易设计界面并生成 **xml** 代码。
 
-* 4. 可测试。界面素来是比较难于测试的，而现在测试可以针对 `ViewModel` 来写专门的测试代码。
+* 4.可测试。界面素来是比较难于测试的，而现在测试可以针对 `ViewModel` 来写专门的测试代码。
+
 
 # 4.Vue2.0生命周期是什么？
 
@@ -44,10 +45,14 @@ description: 不知不觉，使用 Vue 开发已经两年多了，从 1.0 到 2.
 
 * 销毁前/后: 在执行 `destroy` 方法后，对 `data`的改变不会再触发周期函数，说明此时 *Vue* 实例已经解除了事件监听以及和 `DOM` 的绑定，但是 `DOM`结构依然存在。
 
+
 # 5. [Vue1.0](https://v1.vuejs.org/guide/) 和 [Vue2.0](https://vuejs.org/)的对比
 
-* 1. 片段代码: 在 `Vue2.0` 中，每个组件模板中，必须有一个根元素，来包裹所有的元素。
+
+* 1.片段代码: 在 `Vue2.0` 中，每个组件模板中，必须有一个根元素，来包裹所有的元素。
+
 ```html
+
 <!-- 之前:   在1.0使用时完全没问题 -->
     <template>
         <h3>我是组件</h3><strong>我是加粗标签</strong>
@@ -59,8 +64,11 @@ description: 不知不觉，使用 Vue 开发已经两年多了，从 1.0 到 2.
                 <strong>我是加粗标签</strong>
             </div>
     </template>
+
 ```
-* 2. 生命周期见下表
+
+
+* 2.生命周期见下表
 
 |vue1.0| vue2.0| 描述|
 |:-----|:------|:------|
@@ -78,14 +86,17 @@ description: 不知不觉，使用 Vue 开发已经两年多了，从 1.0 到 2.
 |beforeDestroy| beforeDestroy| 组件销毁前调用|
 |destroyed| destroyed| 组件销毁后调用|
 
+
 * 3.过滤器
 
 2.0 删除了 1.0 所有自带的过滤器，将不再是传参的方式调用，如下：
+
 ```js
 {{msg | mimi '12' '5'}}
 ```
 
 而现在2.0中，要使用过滤器，必须要自定义一个过滤器:
+
 ```js
 Vue.filter('toDou',function(n,a,b){
     return n<10?n+a+b:''+n;
@@ -96,12 +107,13 @@ Vue.filter('toDou',function(n,a,b){
 
 ```
 
-* 4. `v-for`循环
+
+* 4.`v-for`循环
 
 	- 在1.0中循环渲染时会使用到 `tranck-by="$indec"`来提高for循环的性能，而在2.0，使用重复数据将不会报错，同时也去掉了一些隐式变量如：index 、 key，如果要用到 `index` 和 `key` 则可通过 ES6的语法来获取：
 
-```html
-v-for="(val,index) in rows"
-```
+	```html
+		v-for="(val,index) in rows"
+	```
 
 	- 关于整数循环，1.0的整数循环是从0开始的，2.0的整数循环则是从1开始的。
