@@ -7,19 +7,29 @@ categories: 关于技术
 
 ### 1. 说说 JS 的数据类型
 
-#### 1.1 基础类型
+#### 1.1 基本类型
 
 * String
 * Number
 * Boolean
 * null
 * undefined
+* symbol (ES6中新增)
 
 #### 1.2 引用类型
 
+* Date
+* RegExp
 * Object
 * Array
-* Function
+* Function ( 后三种为基本包装类型，特殊的引用类型，也算作基本类型)
+
+#### 1.3 基本类型保存在栈上，引用类型的引用保存在栈上，其对象保存在堆中。
+
+#### 1.4 `null` 和 `undefined` 的区别？
+
+    - i. 含义不同：`null` 表示该处不该有值，而 `undefined` 表示该处有值，但还没有进行初始化
+    - ii. 类型不同： `null` 的类型为 `Object`, `undefined` 的类型为 `undefined`
 
 ### 2. 变量提升
 
