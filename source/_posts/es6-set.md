@@ -1,7 +1,8 @@
 ---
 title: ES6之Set个人解读
 date: 2018-02-07 17:05:11
-tags:
+tags: javascript
+categories: 关于技术
 ---
 
 参考链接：[ECMAScript 6 入门- Set 和 Map 数据结构](http://es6.ruanyifeng.com/#docs/set-map)
