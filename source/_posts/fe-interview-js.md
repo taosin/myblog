@@ -61,6 +61,71 @@ categories: 关于技术
 
 #### 4.2 原型与原型链的区别是什么？
 	
+`__proto__` 是隐式原型，指向创建这个对象的函数`(constructor)` 的 `prptotype`，用来构成原型链和实现基于原型的继承。
+
+`protype` 是显式原型，用来实现基于原型的继承与属性的共享。每一个函数都具有 `prototype` 属性。
+
+#### 4.3 在面向对象语言中，继承分为两种：
+
+* 接口集成：只集成方法签名
+* 实现集成：继承实际的方法
+
+	因为 `Javascript` 没有继承的关键字，所以 JS 实现继承的方法很特殊，大概有以下几种：
+
+	- 原型链继承(最常见)：
+
+	```原型链继承
+	var Base = function (){
+		this.name = 'Base';
+		this.toString = function (){
+			return this.name;
+		}
+	}
+	var Sub = function (){
+		Base.call(this);
+		this.name = 'Sub';
+	}
+	```
+
+这种继承解决了原型链继承的问题，但它也有一些弊端：使用 `instanceof` 运算符的时候会发现，它的实例并不是父类的实例（因为父类并没有在它的原型链上）。
+
+	- 实例继承
+
+	```
+	var Base = function (){
+		this.name = 'Base';
+		this.toString = function (){
+			return this.name;
+		}
+	}
+	var Sub = function(){
+		var instance = new Base();
+		instance.name = 'Sub';
+		return instance;
+	}
+	```
+
+这种继承方法只能强行被归类为继承，因为它实际上是返回了一个父类的实例，与子类毫无关系。同样，这种方法也不支持多继承。
+
+	- 拷贝继承
+
+	```
+	var Base = function (){
+		this.name = 'Base';
+		this.toString = function (){
+			return this.name;
+		}
+	}
+	var Sub = function (){
+		var base = new Base();
+		for(var i in base){
+			sub.prototype[i] = base[i];
+		}
+		sub.prototype['name'] = 'Sub';
+	}
+	```
+
+首先，只有可枚举的对象类型才能使用 `foreach` 的方式获取到。它的优点是可以实现多继承，缺点是不方便写，效率低。
 
 ### 5. iframe 的缺点有哪些？
 
@@ -78,6 +143,7 @@ categories: 关于技术
 
 ### 12. 前端性能优化了解多少
 
+	
 
 
 
