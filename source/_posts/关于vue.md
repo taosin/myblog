@@ -1,7 +1,7 @@
 ---
 title: 关于vue
 date: 2016-07-20 22:13:14
-tags: vue.js
+tags: Vue.js
 categories: 关于技术
 ---
 

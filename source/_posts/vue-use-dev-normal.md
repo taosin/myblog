@@ -1,7 +1,7 @@
 ---
 title: vue.js组件使用和开发规范
 date: 2017-07-13 09:28:38
-tags: vue
+tags: Vue.js
 categories: 关于技术
 ---
 

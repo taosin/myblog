@@ -1,7 +1,7 @@
 ---
 title: vue使用阿里oss上传图片功能(一)
 date: 2017-05-24 09:11:56
-tags: vue.js
+tags: Vue.js
 categories: 关于技术
 ---
 

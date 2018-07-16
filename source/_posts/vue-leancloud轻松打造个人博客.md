@@ -1,7 +1,7 @@
 ---
 title: vue+leancloud轻松打造个人博客
 date: 2017-05-20 21:50:44
-tags: vue.js
+tags: Vue.js
 categories: 关于技术
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: vue使用leancloud
 date: 2016-07-26 22:33:24
-tags: leancloud
+tags: Vue.js
 categories: 关于技术
 ---
 
