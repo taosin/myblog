@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Nix_____的小黑屋
-subtitle: Nix_____的小黑屋
+title: Nix的小黑屋
+subtitle: Nix的小黑屋
 description: Nix的小黑屋
 author: Nix_____
-language: zh-CN
+language: zh-Hans
 timezone:
 
 # URL
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
