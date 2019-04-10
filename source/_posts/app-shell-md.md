@@ -3,6 +3,7 @@ title: App Shell模型
 date: 2018-02-06 16:29:09
 tags: PWA
 categories: 关于技术
+photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
 ---
 
 [App Shell 模型  |  Web       |  Google Developers](https://developers.google.com/web/fundamentals/architecture/app-shell?hl=zh-cn)  

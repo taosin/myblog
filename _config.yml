@@ -21,6 +21,7 @@ permalink_defaults:
 source_dir: source
 public_dir: public
 tag_dir: tags
+blog_dir: blogs
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
@@ -49,7 +50,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 5
+  per_page: 100
   order_by: -date
   
 # Category & Tag
@@ -66,13 +67,13 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 30
+per_page: 100
 pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: imocco
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

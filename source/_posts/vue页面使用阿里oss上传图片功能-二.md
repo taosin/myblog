@@ -3,8 +3,9 @@ title: vue使用阿里oss上传图片功能(二)
 date: 2017-05-24 14:35:08
 tags: Vue.js
 categories: 关于技术
+photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
+external: 阿里云对象存储服务（Object Storage Service，简称 OSS），是阿里云提供的海量、安全、低成本、高可靠的云存储服务。它具有与平台无关的RESTful API接口，能够提供99.999999999%（11个9）的数据可靠性和99.99%的服务可用性。您可以在任何应用、任何时间、任何地点存储和访问任意类型的数据。
 ---
-<img src="http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png" alt="">
 
 ### 主要介绍OSS管理控制台设置访问权限、角色等。
 

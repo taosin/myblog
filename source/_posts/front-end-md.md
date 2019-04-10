@@ -3,6 +3,7 @@ title: 前端面试知识点
 date: 2018-02-09 14:57:44
 tags: 前端面试
 categories: 关于技术
+photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
 ---
 
 

@@ -3,6 +3,7 @@ title: hexo使用NexT主题
 date: 2016-07-17 18:52:28
 tags: next
 categories: 关于技术
+photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
 ---
 ## hexo与NexT主题
 ## 关于NexT

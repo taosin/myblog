@@ -3,6 +3,7 @@ title: vue使用leancloud
 date: 2016-07-26 22:33:24
 tags: Vue.js
 categories: 关于技术
+photos: http://images.iamtaoxin.com/219dda941a28c43341fb6063efcd06d0.png
 ---
 
 vue前端使用leadcloud数据存储，实现纯前端＋leadcloud进行数据交互，无需server端，轻松实现个人博客。

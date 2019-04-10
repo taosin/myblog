@@ -3,12 +3,13 @@ title: 前端JS面试必须知道的几个点
 date: 2018-05-17 17:54:44
 tags: 前端面试
 categories: 关于技术
+photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
+external: 总结了一些在面试过程中会遇到的前端问题，本文章主要是Javascript部分。
 ---
 
 
-### 1.函数的三种定义方法
------
-#### 1.1 函数声明
+##### I.函数的三种定义方法
+###### 1.1 函数声明
 
 ```js
 // ES5
@@ -18,8 +19,7 @@ function (){} //匿名函数
 // ES6
 () => {} //如果 {} 内容只有一行 {} 和return 关键字可省略
 ```
-
-#### 1.2 函数表达式（函数字面量）
+###### 1.2 函数表达式（函数字面量）
 
 ```js
 // ES5
@@ -29,20 +29,18 @@ var sum = function getSum()
 let sum = () => {} //如果{} 内容只有一行 {} 和return 关键字可省略
 ```
 
-#### 1.3 构造函数
+###### 1.3 构造函数
 ```js
 var sum =  new GetSum(num1, num2)
 ```
 
-#### 1.4 三种方法的比较
+###### 1.4 三种方法的比较
 
 1. 函数声明有预解析，而且函数声明的优先级高于变量；
 2. 使用 `Function` 构造函数定义函数的人方式是一个函数表达式，这种方式会导致解析两次代码，影响性能。第一次解析常规的 `Javascript` 代码，第二次解析传入构造函数的字符串。
-    
 
-### 2. ES5 中函数的 4种调用
----
-#### 2.1 函数调用模式
+##### II. ES5 中函数的 4种调用
+###### 2.1 函数调用模式
 
 该模式包括 函数名() 和匿名函数调用， `this` 指向 `window`
 
@@ -65,10 +63,9 @@ var getSum =  function(){
 getSum()
 ```
 
-#### 2.2 方法调用
+###### 2.2 方法调用
 
 对象.方法名(), `this` 指向 对象
-
 ```js
 var objList = {
     name: 'methods',
@@ -79,7 +76,7 @@ var objList = {
 objList.getSum()
 ```
 
-#### 2.3 构造器调用
+###### 2.3 构造器调用
 
 `new` 构造函数名 (), `this` 指向构造函数
 
@@ -90,7 +87,7 @@ function Person(){
 var personOne = new Person();
 ```
 
-#### 2.4 间接调用
+###### 2.4 间接调用
 
 利用 `call` 和 `apply` 来实现，`this` 就是 `call` 和 `apply` 对应的第一个参数，如果不传值或者第一个值为 `null` , `undefined` 时 指向 `window`
 
@@ -103,13 +100,10 @@ foo.apply('我是apply改变的this值');
 foo.call('我是call改变的this值');
 ```
 
-### 3. ES6中函数的调用
----
+##### III. ES6中函数的调用
 
 箭头函数不可以当作构造函数，也就是不能用 `new` 命令实例化一个对象，否则会抛出一个错误
-
 箭头函数的 `this` 是和定义时有关，和调用无关
-
 调用就是函数调用模式
 
 ```js
@@ -134,25 +128,21 @@ let arrowObj = {
 arrowObj.arrFun
 ```
 
-### 4. `call`, `apply` 和 `bind`
----
+##### IV. `call`, `apply` 和 `bind`
 
-1. IE5之前不支持 `call` 和 `apply`，`bind` 是 **ES5** 之后出来的；
-2. `call` 和 `apply` 可以调用函数，改变 `this`,实现继承和借用别的对象的方法。
+* IE5之前不支持 `call` 和 `apply`，`bind` 是 **ES5** 之后出来的；
+* `call` 和 `apply` 可以调用函数，改变 `this`,实现继承和借用别的对象的方法。
 
-#### 4.1 `call` 和 `apply` 定义
+###### 4.1 `call` 和 `apply` 定义
 
 调用方法，用一个对象替换掉另一个对象 (this)
-
 对象.call(新 this 对象，实参1，实参2，实参3...)
-
 对象.apply(新 this 对象，[实参1，实参2，实参3...])
 
-#### 4.2 `call` 和`apply` 用法
+###### 4.2 `call` 和`apply` 用法
 
-##### 4.2.1 间接调用函数，改变作用域的 `this` 值；
-##### 4.2.2 劫持其他对象的方法
-
+* a. 间接调用函数，改变作用域的 `this` 值；
+* b. 劫持其他对象的方法
 ```js
 var foo = {
     name: '张三',
@@ -167,29 +157,24 @@ var bar = {
 foo.logName.call(bar); //李四
 // 实质是call改变了foo的this指向为bar，并调用函数
 ```
-
-##### 4.2.3 两个函数实现继承
-
-<div style="font-size:20px" >
-
+* c. 两个函数实现继承
 ```js
+<div style="font-size:20px" >
 function Animal(name){
    this.name = name;
    this.showName = function (){
        console.log(this.name);
    }
 }
-
 function Cat(name){
     Animal.call(this, name);
 }
 var cat = new Cat('Black Cat');
 cat.showName(); // Black Cat
-```
 </div>
+```
 
-##### 4.2.4 为类数组(`arguments` 和`nodeList`)添加数组方法 `push`，`pop`
-
+* d. 为类数组(`arguments` 和`nodeList`)添加数组方法 `push`，`pop`
 ```js
 (function (){
     Array.prototype.push.call(arguments,'王五');
@@ -197,33 +182,28 @@ cat.showName(); // Black Cat
 })('张三','李四');
 ```
 
-##### 4.2.5 合并数组
-
+* e. 合并数组
 ```js
 let arr1 = [1,2,3];
 let arr2 = [4,5,6];
 Array.prototype.push.apply(arr1,arr2); //将arr2合并到了arr1中
 ```
-##### 4.2.6 求数组最大值
-
+* f. 求数组最大值
 ```js
 Math.max.apply(null,arr)
 ```
 
-##### 4.2.7 判断字符类型
-
+* g. 判断字符类型
 ```js
 Object.prototype.toString.call({})
 // [object Object]
 ```
 
-### 5. JS常见的四种设计模式
----
+##### V. JS常见的四种设计模式
 
-#### 5.1 工厂模式
+###### 5.1 工厂模式
 
 简单的工厂模式可以理解为解决多个相似的问题；
-
 ```js
 function CreatePerson(name,age,sex){
     var obj = new Object();
@@ -249,10 +229,9 @@ console.log(p2.age);   // 27
 console.log(p2.sex);   // 女
 console.log(p2.sayName()); // tugenhua
 ```
-#### 5.2 单例模式
+###### 5.2 单例模式
 
 只能被实例化(构造函数给实例添加属性与方法)一次
-
 ```js
 //单体模式
 var Singleton = function (name){
@@ -279,10 +258,8 @@ var a = getInstance('aa');
 var a = getInstance('bb');
 ```
 
-#### 5.3 沙箱模式
-
+###### 5.3 沙箱模式
 将一些函数放到自执行函数里面，但要闭包暴露接口，用变量接受暴露的接口，再调用里面的值，否则无法使用里面的值。
-
 ```js
 let sanboxModel = (function(){
     function sayName(){};
@@ -294,10 +271,9 @@ let sanboxModel = (function(){
 })()
 ```
 
-#### 5.4 发布者订阅模式
+###### 5.4 发布者订阅模式
 
 就例如我们关注了某一个公众号，然后他对应的有新的消息就会给你推送。
-
 ```js
 //发布者与订阅模式
 
@@ -332,16 +308,14 @@ shoeObj.listen(function(color,size){
 shoeObj.trigger("红色", 40);
 shoeObj.trigger("黑色", 42); 
 ```
-
 代码实现逻辑是用数组存储订阅者，发布者毁掉函数里面通知的方式是遍历订阅者数组，并将发布者内容传入订阅者数组
 
-### 6. 原型链
----
+##### VI. 原型链
 
-#### 6.1 定义
+###### 6.1 定义
 对象继承属性的一个链条
 
-#### 6.2 构造函数，实例与原型对象的关系
+###### 6.2 构造函数，实例与原型对象的关系
 
 ![image](https://segmentfault.com/img/bV8wcf?w=638&h=241/view)
 
@@ -354,22 +328,19 @@ var o3personTwo = new person('personTwo'); //personTwo是实例
 
 原型对象都有一个默认的`constructor`属性指向构造函数
 
-#### 6.3 创建实例的方法
+###### 6.3 创建实例的方法
 
-##### 6.3.1 字面量
-
+* a. 字面量
 ```js
 let obj = {'name':'张三'}
 ```
-##### 6.3.2 `Object` 构造函数创建
-
+* b. `Object` 构造函数创建
 ```js
 let Obj = new Object();
 Obj.name = '张三';
 ```
 
-##### 6.3.3 使用工厂模式创建对象
-
+* c. 使用工厂模式创建对象
 ```js
 function createPerson(name){
     var o = new Object();
@@ -380,8 +351,7 @@ function createPerson(name){
 var person1 = createPerson('张三');
 ```
 
-##### 6.3.4 使用构造函数创建对象
-
+* d. 使用构造函数创建对象
 ```js
 function Person(name){
     this.name = name;
@@ -389,31 +359,30 @@ function Person(name){
 var person1 = new Person('张三')；
 ```
 
-#### 6.4 `new` 运算符
+###### 6.4 `new` 运算符
 
-1. 创建了一个新对象；
-2. `this`指向构造函数；
-3. 构造函数有返回，会替换 `new` 出来的对象，如果没有就是 `new` 出来的对象
-4. 手动封装一个 `new` 运算符
-
+* a. 创建了一个新对象；
+* b. `this`指向构造函数；
+* c. 构造函数有返回，会替换 `new` 出来的对象，如果没有就是 `new` 出来的对象
+* d. 手动封装一个 `new` 运算符
 ```js
 var new2 = function (func){
-    var o = Object.create(func.protorype);   //创建对象
-    var k = func.call(o);    //改变this指向，把结果赋给k
-    if(typeof k === 'object'){   //判断k的类型是不是对象
-        return k;
-    } else {
-        return o;
+        var o = Object.create(func.protorype);   //创建对象
+        var k = func.call(o);    //改变this指向，把结果赋给k
+        if(typeof k === 'object'){   //判断k的类型是不是对象
+            return k;
+        } else {
+            return o;
+        }
     }
-}
 ```
 
-#### 6.5 对象的原型链
+###### 6.5 对象的原型链
 
 ![image](https://segmentfault.com/img/bV8wf4?w=570&h=709)
 
-### 7. 继承的方式
+##### VII. 继承的方式
 
 JS是一门弱类型动态语言，封装和继承是他的两大特性：
 
-#### 7.1 原型链继承
+###### 7.1 原型链继承
