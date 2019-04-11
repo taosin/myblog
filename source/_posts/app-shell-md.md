@@ -6,14 +6,13 @@ categories: 关于技术
 photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
 ---
 
-[App Shell 模型  |  Web       |  Google Developers](https://developers.google.com/web/fundamentals/architecture/app-shell?hl=zh-cn)  
+> 文章来自：[App Shell 模型  |  Web       |  Google Developers](https://developers.google.com/web/fundamentals/architecture/app-shell?hl=zh-cn)  
 
 **App Shell** 架构是构建 Progressive Web App 的一种方式，这种应用能可靠且即时地加载到您的用户屏幕上，与本机应用相似。
 
-App “shell” 是支持用户界面所需的最小的 HTML、CSS和JavaScript，如果离线缓存，可确保在用户重复访问时提供 **即时**、**可靠的良好性能**。这意味着并不是每次用户访问时都要从网络加载 App Shell，只需要从网络中加载必要的内容。
+**App Shell** 是支持用户界面所需的最小的 HTML、CSS和JavaScript，如果离线缓存，可确保在用户重复访问时提供 **即时**、**可靠的良好性能**。这意味着并不是每次用户访问时都要从网络加载 App Shell，只需要从网络中加载必要的内容。
 
 对于使用包含大量 JavaScript 的架构的 [单页应用](https://en.wikipedia.org/wiki/Single-page_application)来说，App Shell 是一种常用方法。这种方法依赖渐进式缓存 Shell（使用[服务工作线程：简介  |  Web       |  Google Developers](https://developers.google.com/web/fundamentals/primers/service-workers/?hl=zh-cn)）让应用运行。接下来，为使用 JavaScript 的每个页面加载动态内容。App Shell 非常适合用于在没有网络的情况下将一些初始 HTML 快速加载到屏幕上。
-
 
 ![](App%20Shell%E6%A8%A1%E5%9E%8B/appshell.png)
 
@@ -71,7 +70,6 @@ Jake Archibald 的离线维基百科应用[Rick and Morty - Offline Wikipedia](h
 * 用户界面“主干”的 HTML 和 CSS，包含导航和内容占位符。
 * 用于处理导航和 UI 逻辑的外部 JavaScript 文件 (`app.js`)，以及用于显示从服务器中检索的帖子并使用 IndexedDB 等存储机制将其存储在本地的代码。
 * 网络应用清单和用于启用离线功能的服务工作线程加载程序。
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -133,17 +131,14 @@ Jake Archibald 的离线维基百科应用[Rick and Morty - Offline Wikipedia](h
 ### 手动缓存 App Shell
 
 以下是使用服务工作线程的 `install ` 事件将 `App Shell` 中的静态资源缓存到 Cache API  [Cache - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Cache) 中的服务工作线程代码示例:
-
 ```javascript
 ar cacheName = 'shell-content';
 var filesToCache = [
   '/css/styles.css',
   '/js/scripts.js',
   '/images/logo.svg',
-
   '/offline.html’,
-
-  '/’,
+  '/’
 ];
 
 self.addEventListener('install', function(e) {
