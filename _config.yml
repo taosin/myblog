@@ -3,27 +3,25 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
-language: en
+title: Nix的小黑屋
+subtitle: Nix的小黑屋
+description: Nix的小黑屋
+author: Nix_____
+language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://iamtaoxin.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing index.html from permalinks
 
 # Directory
 source_dir: source
 public_dir: public
 tag_dir: tags
+blog_dir: blogs
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
@@ -33,11 +31,8 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
-titlecase: false # Transform title into titlecase
-external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
-  exclude:
+titlecase: true # Transform title into titlecase
+external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -45,10 +40,10 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace:
-
+  
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -57,15 +52,11 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-
+  
 # Category & Tag
 default_category: uncategorized
 category_map:
-tag_map:
-
-# Metadata elements
-## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-meta_generator: true
+tag_map: tag
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -73,8 +64,6 @@ meta_generator: true
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -89,4 +78,17 @@ theme: stun
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  - type: git
+    repository: https://git.coding.net/imocco/imocco.coding.me.git
+    branch: master
+
+  - type: git
+    repository: https://github.com/taosin/taosin.github.io.git
+    branch: master
+
+avatar: http://7xs43y.com1.z0.glb.clouddn.com/u=1421062774,389829371&fm=21&gp=0.jpg
+
+links:
+  # 百度: https://www.baidu.com/
+  # 谷歌: https://www.google.com/
+  # 知乎: https://www.zhihu.com/
