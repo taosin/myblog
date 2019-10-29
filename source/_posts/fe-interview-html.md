@@ -3,7 +3,6 @@ title: 前端面试之HTML篇
 date: 2018-06-13 07:49:47
 tags: 前端面试
 categories: 关于技术
-photos: http://images.iamtaoxin.com/20160922210759487.png
 external: 总结了一些在面试过程中会遇到的前端问题，本文章主要是HTML部分。
 ---
 

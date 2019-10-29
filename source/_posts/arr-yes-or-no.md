@@ -3,7 +3,6 @@ title: 判断一个对象是否为数组
 date: 2018-05-17 17:57:07
 tags: javascript
 categories: 关于技术
-photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
 ---
 
 * 如何判断一个对象是不是 **Array**

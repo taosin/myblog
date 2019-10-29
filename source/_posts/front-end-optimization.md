@@ -3,7 +3,6 @@ title: 谈谈前端优化
 date: 2018-05-27 22:32:47
 tags: 性能优化
 categories: 关于技术
-photos: http://images.iamtaoxin.com/5b87ef0ca8dc0d15696bb971880d44b60618c940dbacf-P8nQd6_fw658.jpeg
 external: 对于前端的性能话题从未间断过。性能是我们关注的指标，因为它直接影响着我们的用户，同时也在影响着产品本身。前端优化层出不穷，移动端大行其道的现在，如何做好前端优化，我们势在必行。
 ---
 

@@ -3,7 +3,6 @@ title: 使用 Node.js + Nginx 部署 HTTPS
 date: 2018-06-08 16:13:33
 tags: 服务器部署
 categories: 关于技术
-photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
 ---
 
 具体步骤：

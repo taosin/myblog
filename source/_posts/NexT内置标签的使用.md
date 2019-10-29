@@ -3,7 +3,6 @@ title: NexT内置标签的使用
 date: 2016-07-23 17:46:26
 tags: next
 categories: 关于技术
-photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
 ---
 NexT内置标签的使用
 

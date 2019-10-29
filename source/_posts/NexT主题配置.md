@@ -3,7 +3,6 @@ title: NexT主题配置
 date: 2016-07-18 23:10:48
 tags: next
 categories: 关于技术
-photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
 ---
 NexT主题配置
 

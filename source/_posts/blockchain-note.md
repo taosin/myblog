@@ -4,7 +4,6 @@ date: 2018-06-14 16:45:45
 tags: 区块链
 categories: 笔记
 external: 区块链是个天然和钱离得很近的领域，离钱越近就越容易赚到钱，尽早开始准备并在区块链领域站稳脚跟的人将能享受到行业崛起的巨大红利，就像四年前的微信公众号，两年前的知识付费，一年前的微信小程序。
-photos: http://images.iamtaoxin.com/block-chain.jpg
 ---
 
 > 参考来源: <label style="font-weight: bold;margin-left: 10px">[区块链开发入门：从 0 到 1 构建基于以太坊智能合约的 ICO DApp](https://juejin.im/book/5addb2eb6fb9a07abd0d4557/section/5ade6bf7518825673e353f33#heading-1)</label>

@@ -3,7 +3,6 @@ title: 前端JS面试必须知道的几个点
 date: 2018-05-17 17:54:44
 tags: 前端面试
 categories: 关于技术
-photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
 external: 总结了一些在面试过程中会遇到的前端问题，本文章主要是Javascript部分。
 ---
 

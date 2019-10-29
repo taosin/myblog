@@ -3,7 +3,6 @@ title: hexo使用初体验
 date: 2016-07-17 15:52:28
 tags: next
 categories: 关于技术
-photos: http://images.iamtaoxin.com/0e11af972a262b19c8f38df754c88348.png
 ---
 # hexo初体验
 ## hexo终于还是搭好了，分享一些踩坑经验

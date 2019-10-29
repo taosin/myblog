@@ -3,7 +3,6 @@ title: vue.js组件使用和开发规范
 date: 2017-07-13 09:28:38
 tags: Vue.js
 categories: 关于技术
-photos: http://images.iamtaoxin.com/219dda941a28c43341fb6063efcd06d0.png
 ---
 
 参考：[Vue.js风格指南](https://cn.vuejs.org/v2/style-guide/)

@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Nix的小黑屋
-subtitle: Nix的小黑屋
-description: Nix的小黑屋
+title: 闲人的博客
+subtitle: “何时归去做个闲人”
+description: 闲人的博客
 author: Nix_____
-language: zh-Hans
+language: zh-CN
 timezone:
 
 # URL
@@ -79,7 +79,7 @@ theme: stun
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   - type: git
-    repository: https://git.coding.net/imocco/imocco.coding.me.git
+    repository: git@git.dev.tencent.com:imocco/imocco.coding.me.git
     branch: master
 
   - type: git
