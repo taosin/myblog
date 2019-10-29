@@ -2,7 +2,7 @@
 title: Vue常见知识点
 date: 2018-03-10 11:41:58
 tags: Vue.js
-categories: 前端笔记
+categories: 面试笔记
 external: 不知不觉，使用 Vue 开发已经两年多了，从 1.0 到 2.0 ，Vue 伴随着我的整个前端开发历程，因此整理一些关于 Vue 的常见知识点。
 ---
 

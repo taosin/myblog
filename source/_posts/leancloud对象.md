@@ -2,7 +2,7 @@
 title: leancloud对象
 date: 2016-07-29 22:47:31
 tags: leancloud
-categories: 关于技术
+categories: 技术整理
 external: LeanCloud 能够高效存取海量级 JSON 对象、二进制文件、地理位置等数据。其内置的行级 ACL 权限控制，以及通用的用户及角色管理体系，可以帮助您快速实现安全而灵活的数据访问。无服务器架构，让您快人一步。
 ---
 leadcloud数据存储开发指南(三)－Js篇

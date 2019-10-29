@@ -1,8 +1,8 @@
 ---
 title: hexo使用NexT主题
 date: 2016-07-17 18:52:28
-tags: next
-categories: 关于技术
+tags: 博客搭建
+categories: 技术整理
 ---
 ## hexo与NexT主题
 ## 关于NexT

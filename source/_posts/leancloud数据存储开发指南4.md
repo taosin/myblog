@@ -2,7 +2,7 @@
 title: leadcloud数据存储开发指南(四)－Js篇
 date: 2016-08-01 22:20:46
 tags: leancloud
-categories: 关于技术
+categories: 技术整理
 external: 数据存储（LeanStorage）是 LeanCloud 提供的核心功能之一，它的使用方法与传统的关系型数据库有诸多不同。下面我们将其与传统数据库的使用方法进行对比，让大家有一个初步了解。
 ---
 leadcloud数据存储开发指南(四)－Js篇

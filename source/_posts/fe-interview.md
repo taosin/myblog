@@ -1,8 +1,8 @@
 ---
 title: 前端JS面试必须知道的几个点
 date: 2018-05-17 17:54:44
-tags: 前端面试
-categories: 关于技术
+tags: javascript
+categories: 面试笔记
 external: 总结了一些在面试过程中会遇到的前端问题，本文章主要是Javascript部分。
 ---
 

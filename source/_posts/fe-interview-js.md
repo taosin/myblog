@@ -1,8 +1,8 @@
 ---
 title: 前端面试基础之JavaScript篇
 date: 2018-05-20 17:27:00
-tags: 前端面试
-categories: 关于技术
+tags: javascript
+categories: 面试笔记
 external: 总结了一些在面试过程中会遇到的前端问题，本文章主要是Javascript部分。
 ---
 

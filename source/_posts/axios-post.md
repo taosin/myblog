@@ -1,8 +1,8 @@
 ---
 title: 使用axios发送POST请求时后端获取不到参数的问题
 date: 2018-05-18 17:21:39
-tags: 前端
-categories: 关于技术
+tags: 踩过的坑
+categories: 技术整理
 external: 在使用 vue2 + axios + node.js + express 开发管理后台时，遇到了axios发送POST请求时后端获取不到参数的问题 ，查阅资料许久，还是未找到解决办法，无奈之下，喝一口凉水，歇息一番，继续寻求良方。
 ---
 

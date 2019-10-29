@@ -2,7 +2,7 @@
 title: 搭建Http静态服务器环境
 date: 2017-07-02 11:23:08
 tags: bash
-categories: 关于技术
+categories: 技术整理
 ---
 
 搭建静态网站，首先需要部署环境。下面的步骤，将告诉大家如何在服务器上通过 Nginx 部署 HTTP 静态服务

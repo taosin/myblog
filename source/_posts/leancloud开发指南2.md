@@ -2,7 +2,7 @@
 title: leancloud开发指南2
 date: 2016-07-28 20:23:57
 tags: leancloud
-cateories: 关于技术
+cateories: 技术整理
 ---
 
 leadcloud数据存储开发指南(二)－Js篇

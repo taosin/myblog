@@ -2,7 +2,7 @@
 title: leadcloud数据存储（一）-Javascript
 date: 2016-07-27 22:06:34
 tags: leancloud
-categories: 关于技术
+categories: 技术整理
 ---
 ## 安装sdk
 ### 获取sdk

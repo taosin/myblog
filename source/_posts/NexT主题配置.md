@@ -1,8 +1,8 @@
 ---
 title: NexT主题配置
 date: 2016-07-18 23:10:48
-tags: next
-categories: 关于技术
+tags: 博客搭建
+categories: 技术整理
 ---
 NexT主题配置
 

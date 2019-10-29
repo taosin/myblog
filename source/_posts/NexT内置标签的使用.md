@@ -1,8 +1,8 @@
 ---
 title: NexT内置标签的使用
 date: 2016-07-23 17:46:26
-tags: next
-categories: 关于技术
+tags: 博客搭建
+categories: 技术整理
 ---
 NexT内置标签的使用
 

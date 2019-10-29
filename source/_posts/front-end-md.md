@@ -1,8 +1,8 @@
 ---
 title: 前端面试知识点
 date: 2018-02-09 14:57:44
-tags: 前端面试
-categories: 关于技术
+tags: html
+categories: 面试笔记
 ---
 
 

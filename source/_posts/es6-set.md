@@ -2,7 +2,7 @@
 title: ES6之Set个人解读
 date: 2018-02-07 17:05:11
 tags: javascript
-categories: 关于技术
+categories: 面试笔记
 external: ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。
 ---
 
