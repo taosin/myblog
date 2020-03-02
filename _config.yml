@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 闲人的博客
+title: 码徒的博客
 subtitle: 生命不息，折腾不止
-description: 闲人的博客
+description: 戎码一生
 author: Nix_____
 language: zh-CN
 timezone:
@@ -83,7 +83,7 @@ deploy:
   #   branch: master
 
   - type: git
-    repository: https://github.com/taosin/iamtaoxin.github.io
+    repository: git@github.com:taosin/taosin.github.io.git
     branch: master
 
 avatar: http://7xs43y.com1.z0.glb.clouddn.com/u=1421062774,389829371&fm=21&gp=0.jpg
